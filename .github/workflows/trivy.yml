@@ -20,7 +20,7 @@ jobs:
         uses: docker/setup-buildx-action@v3
       # 3. Build the docker image
       - name: Build and push
-        uses: docker build -t 'my-image:latest'
+        run: docker build -t 'my-image:latest'
 
 
       # 4. Scan with trivy the built image
