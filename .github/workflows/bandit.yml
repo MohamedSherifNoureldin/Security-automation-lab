@@ -12,4 +12,7 @@ jobs:
 
     steps:
 # 1. Checkout the code using actions/checkout
+      - uses: actions/checkout@v4
 # 2. Run bandit using tj-actions bandit
+      - name: Run bandit
+        uses: tj-actions/bandit@v5.1
