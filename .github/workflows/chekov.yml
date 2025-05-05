@@ -1,1 +1,23 @@
 
+name: IAC
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+    zap-scan:
+        runs-on: ubuntu-latest
+    
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            - name: Checkov GitHub Action
+              uses: bridgecrewio/checkov-action@v12
+              with:
+                directory: IAC/
+                # This will add CLI output to the console 
+                output_format: cli
+                output_file_path: console
+    
