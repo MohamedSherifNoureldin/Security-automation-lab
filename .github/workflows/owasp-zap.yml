@@ -22,7 +22,7 @@ jobs:
         run: docker build -t "my-app:latest" .
     # 3. Run the docker Container
       - name: Run the docker container
-        run: docker run "my-app" -d
+        run: docker run -d "my-app"
     # 4. Run OWASP ZAP on the running webserver
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.12.0
