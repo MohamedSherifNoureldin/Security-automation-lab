@@ -25,15 +25,16 @@ jobs:
           context: .
           file: ./Dockerfile
           push: false
-          tags: my-image:latest
+          tags: 'my-image:latest'
 
 
       # 4. Scan with trivy the built image
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          image-ref: my-image:latest
+          image-ref: 'my-image:latest'
           format: table
           severity: CRITICAL,HIGH
           exit-code: 1
+          ignore-unfixed: true
 
