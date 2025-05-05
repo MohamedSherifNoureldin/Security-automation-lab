@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [main]
 jobs:
-    zap-scan:
+    chekov:
         runs-on: ubuntu-latest
     
         steps:
