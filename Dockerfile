@@ -22,3 +22,5 @@ RUN pip install flask django==1.2  # known vulnerabilities
 
 # Run app
 CMD ["python", "main.py"]
+
+
